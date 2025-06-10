@@ -1,0 +1,280 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header con imagen y texto */
+header.doble-color {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/PET.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2em 1em;
+}
+
+.columna {
+  padding: 0.5em;
+}
+
+nav {
+  margin-top: 1em;
+}
+
+nav a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Secciones con cuadros */
+main {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1fr));
+  gap: 20px;
+}
+
+section {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
+section h2 {
+  color: #00796b;
+  margin-bottom: 10px;
+}
+
+section ul {
+  padding-left: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #00796b;
+  color: white;
+  margin-top: 30px;
+}
+
+.buscador {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+
+.buscador input {
+  padding: 8px;
+  width: 180px;
+  border: 2px solid #26a69a;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.buscador button {
+  padding: 8px 10px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.buscador button:hover {
+  background-color: #004d40;
+}
+
+header h1 {
+  font-size: 3rem;  /* Cambia este valor para hacerlo más grande o más chico */
+  font-weight: bold;
+  margin: 0;
+  padding: 10px 0;
+}
+
+/* Estilo para secciones tipo tarjeta */
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  margin: 20px 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+/* Extra: mejora las listas ordenadas */
+.card ol li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Mejora de la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: #fff;
+  font-size: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  border: 1px solid #26a69a;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #00796b;
+  color: white;
+}
+img {
+    max-width: 200px;
+    border-radius: 5px;
+}
+
+    /* MENÚ HAMBURGUESA */
+    .menu-hamburguesa {
+      position: fixed;
+      top: 18px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    #abrir-menu {
+      font-size: 30px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .menu-contenido {
+      display: none;
+      flex-direction: column;
+      background-color: #26a69a;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .menu-contenido a {
+      color: white;
+      text-decoration: none;
+      margin: 5px 0;
+      font-weight: bold;
+    }
+
+    .menu-contenido a:hover {
+      text-decoration: underline;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0 20px;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background: linear-gradient(to right, #00796b, #26a69a);
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    section.card {
+      background-color: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    th {
+      background-color: #00796b;
+      color: white;
+    }
+/*buscador*/
+.buscador {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  z-index: 10;
+}
+
+.buscador input {
+  padding: 8px;
+  width: 180px;
+  border: 2px solid #26a69a;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.buscador button {
+  padding: 8px 10px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.buscador button:hover {
+  background-color: #004d40;
+}

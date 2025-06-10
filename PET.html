@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo sobre el PET</title>
+  <link rel="stylesheet" href="style.css">
+  <div class="buscador">
+  <input type="text" id="campoBusqueda" placeholder="Buscar en el sitio...">
+  <button onclick="buscarTexto()">Buscar</button>
+</div>
+</head>
+<body>
+
+  <!-- ÍNDICE EN MENÚ HAMBURGUESA -->
+  <div class="menu-hamburguesa">
+    <button id="abrir-menu">☰</button>
+    <div id="indice" class="menu-contenido">
+      <a href="#introduccion">Inicio</a>
+      <a href="#que-es">¿Qué es?</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#comparacion">Comparación</a>
+       <a href="#objetivos">objectivos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <header>
+    <h1>"PET" Tereftalato de Polietileno</h1>
+  </header>
+
+  <section id="introduccion" class="card">
+    <h2>Introducción</h2>
+    <p>El PET es un tipo de plástico muy común y reciclable.</p>
+  </section>
+
+  <section id="que-es" class="card">
+    <h2>¿Qué es el PET?</h2>
+    <p>El PET es también conocido como PETE y es un plástico que se utiliza para hacer
+      envases de bebidas y alimentos. Por sus propiedades,
+      es un material que se puede reutilizar y en ese sentido es bueno para el medio ambiente</p>
+  </section>
+
+  <section id="beneficios" class="card">
+    <h2>Beneficios</h2>
+    <ul>
+      <li>Reciclable</li>
+      <li>Resistente</li>
+      <li>Ligero</li>
+    </ul>
+  </section>
+
+  <section id="Proceso" class="card">
+    <h2>¿Cómo se recicla el PET?</h2>
+    <ol>
+      <li>Recolección</li>
+      <li>Clasificación</li>
+      <li>Limpieza</li>
+      <li>Trituración</li>
+      <li>Fundición</li>
+      <li>Transformación</li>
+    </ol>
+  </section>
+
+  <section id="comparacion" class="card">
+    <h2>Comparación con otros plásticos</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>Uso</th>
+          <th>Reciclable</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>PET</td><td>Botellas</td><td>Sí</td></tr>
+        <tr><td>PVC</td><td>Tuberías</td><td>No</td></tr>
+        <tr><td>HDPE</td><td>Jabones</td><td>Sí</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="objetivos" class="card">
+    <h2>objetivos</h2>
+    <p>El PET (Tereftalato de Polietileno) es un polímero plástico muy usado en envases.</p>
+  </section>
+
+ <!--galeria de imagenes -->
+  <section id="galeria" class="card">
+  <h2>Galería</h2>
+  <div class="galeria-imagenes">
+    <img src="img/PET.png" alt="Botellas de PET">
+    <img src="img/cuerpo.jpg" alt="Proceso de reciclaje">
+    <img src="img/ecologico.jpg" alt="Producto reciclado">
+    <img src="img/foco.jpg" alt="reciclaje">
+    <img src="img/Pet Mode.jpg" alt="">
+    <img src="img/PET.png" alt="">
+    <img src="img/pie.jpg" alt="">
+    <img src="img/planeta.jpg" alt="">
+    <img src="img/planta.jpg" alt="">
+    <img src="img/reciclaje.png" alt="">
+    <img src="img/tierra.jpg" alt="">
+    <img src="img/verde.jpg" alt="">
+  </div>
+</section>
+
+  <section id="contacto" class="card">
+    <h2>Contacto</h2>
+    <p>Puedes escribirme para más información sobre el PET.</p>
+  </section>
+
+  <!-- JAVASCRIPT PARA MOSTRAR/MOSTRAR EL ÍNDICE -->
+  <script>
+    const boton = document.getElementById("abrir-menu");
+    const menu = document.getElementById("indice");
+
+    boton.addEventListener("click", () => {
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    });
+  </script>
+  <script>
+    /*Buscador de texto*/
+function buscarTexto() {
+  const texto = document.getElementById("campoBusqueda").value.toLowerCase();
+  const secciones = document.querySelectorAll("section");
+  let encontrado = false;
+
+  secciones.forEach(sec => {
+    const contenido = sec.textContent.toLowerCase();
+    if (contenido.includes(texto) && texto.trim() !== "") {
+      sec.style.border = "2px solid #00796b";
+      sec.scrollIntoView({ behavior: "smooth", block: "center" });
+      encontrado = true;
+    } else {
+      sec.style.border = "none";
+    }
+  });
+
+  if (!encontrado && texto.trim() !== "") {
+    alert("No se encontró el texto ingresado.");
+  }
+}
+</script>
+
+</body>
+</html>
